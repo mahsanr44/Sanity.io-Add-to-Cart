@@ -5,13 +5,13 @@ import { NextRequest, NextResponse } from "next/server";
 import { v4 as uuid } from "uuid";
 
 
-const url =fetch(`http://localhost:3000/api/cart?user_id=${cookies().get("user_id")?.value}`)
+// const url =fetch(`http://localhost:3000/api/cart?user_id=${cookies().get("user_id")?.value}`)
 
 export const GET = async (request: NextRequest) => {
-  const req= request.nextUrl 
-  const uid=req.searchParams.get("user_id") as string
+  // const req= request.nextUrl 
+  // const uid=req.searchParams.get("user_id") as string
   try {
-    const res = await db.select().from(cartTable).where(eq(cartTable.user_id,uid));
+    const res = await db.select().from(cartTable);
     return NextResponse.json({
       data: res,
     });
