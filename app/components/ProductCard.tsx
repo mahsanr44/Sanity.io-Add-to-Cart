@@ -3,8 +3,6 @@ import React, { FC } from 'react'
 import { urlForImage } from "@/sanity/lib/image"
 import Image from "next/image"
 
-
-
 const ProductCard: FC<{ item: any }> = ({ item }) => {
 
   const handleAddtoCart = async () => {
